@@ -35,7 +35,7 @@ if args.url != 'Use -h Parameter to show Help.':
     with open('data/target.py') as THandler:
         targetHandler = BeautifulSoup(THandler, 'lxml')
     
-    if getTarget.status_code == 404 || getTarget.status_code == 403:
+    if getTarget.status_code == 404 or getTarget.status_code == 403:
         print(f' Receive [+] {getUsrIP} < {extractUrl}, Code: {getTarget.status_code}')
         
     else:
